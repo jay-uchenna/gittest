@@ -18,7 +18,7 @@ bool Check_ISBN_is_valid(std::string ISBN){
 		sum += (((int)ISBN[i++] - '0') * 1);
 		sum += (((int)ISBN[i++] - '0') * 3);
 	}
-	if ((((sum%10) == 0) && (((int)ISBN[i] - '0') == 0))||
+	if ((((sum%10) == 0) && (((int)ISBN[i] == '0')))||
 			((10 -(sum%10)) ==  ((int)ISBN[i] - '0'))){
 	 	return true;
 	}
